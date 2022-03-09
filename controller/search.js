@@ -7,9 +7,14 @@ const search = function (query, callback) {
     request("https://www.nhaccuatui.com/tim-kiem?q=" + query, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        const url = $($('.sn_search_single_song')['0']).find('a').attr('href');
-        const songName = $($('.sn_search_single_song')['0']).find('.title_song a').attr('title');
-        const singer = $($('.sn_search_single_song')['0']).find('.singer_song a').text();
+        let url = $($('.sn_search_single_song')['0']).find('a').attr('href');
+        let songName = $($('.sn_search_single_song')['0']).find('.title_song a').attr('title');
+        let singer = $($('.sn_search_single_song')['0']).find('.singer_song a').text();
+        if ($('.sn_box_search_suggest')){
+            songName = $($('.sn_box_search_suggest')[0]).find('.sn_name_album_search a').attr('title');
+            singer =  $($('.sn_box_search_suggest')[0]).find('.sn_list_singer_search a').text();
+            url = $($('.sn_box_search_suggest')[0]).find('.sn_thumb a').attr('href');
+        }
         if (url) {
           return request(url, (error, response, html) => {
             if (!error && response.statusCode == 200) {
@@ -24,7 +29,7 @@ const search = function (query, callback) {
               songobj["api author"] = "Nanika";
               songobj.hoster = "";
               songobj.lyrics = lyrics.trim();
-              callback(songobj);
+              return callback(songobj);
             }
           })
         }
