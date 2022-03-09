@@ -1,1 +1,1 @@
-# REST-lyrics-finder
+# RiFA ( Rest lyrIc Finder Api)
