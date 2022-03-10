@@ -10,7 +10,7 @@ const search = function (query, callback) {
         let url = $($('.sn_search_single_song')['0']).find('a').attr('href');
         let songName = $($('.sn_search_single_song')['0']).find('.title_song a').attr('title');
         let singer = $($('.sn_search_single_song')['0']).find('.singer_song a').text();
-        if ($('.sn_box_search_suggest')){
+        if (($('.sn_box_search_suggest')).length != 0){
             songName = $($('.sn_box_search_suggest')[0]).find('.sn_name_album_search a').attr('title');
             singer =  $($('.sn_box_search_suggest')[0]).find('.sn_list_singer_search a').text();
             url = $($('.sn_box_search_suggest')[0]).find('.sn_thumb a').attr('href');
