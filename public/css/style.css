@@ -1,0 +1,40 @@
+header{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+body{
+    margin: 0;
+    background-color: #0093E9;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) no-repeat fixed;
+    text-align: center;
+}
+#box{
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    height: fit-content;
+}
+.no-un{
+    text-decoration: none;
+    color: white;
+}

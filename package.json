@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,11 @@
   "dependencies": {
     "axios": "",
     "cheerio": "",
+    "dotenv": "",
+    "ejs": "",
     "express": ""
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
