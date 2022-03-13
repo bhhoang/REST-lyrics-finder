@@ -14,7 +14,7 @@ else if(process.env.SOURCEMODE == 2){
 }
 
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public/css')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.render('index');

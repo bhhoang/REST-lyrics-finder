@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 require('dotenv').config({ path: '../.env' });
 let search;
-console.log(process.env.SOURCEMODE);
 if(process.env.SOURCEMODE == 1){
 search = require('../controller/search');
 }

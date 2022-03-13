@@ -3,17 +3,21 @@ header{
     padding: 20px;
     text-align: center;
     color: white;
+    width: 100%;
+    
 }
 body{
     margin: 0;
     background-color: #0093E9;
     background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) no-repeat fixed;
     text-align: center;
+    overflow: hidden;
 }
 #box{
     background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
+    text-align: justify;
     align-self: center;
     position: absolute;
     width: fit-content;
@@ -37,4 +41,15 @@ footer{
 .no-un{
     text-decoration: none;
     color: white;
+}
+
+#box::before{
+    content: url("../assets//252712686_212110901046964_4144234705270914119_n.jpg");
+    width: inherit;
+    height: inherit;
+}
+#box::after{
+    content: "^^";
+    width: inherit;
+    height: inherit;
 }
