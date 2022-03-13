@@ -11,8 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "",
     "cheerio": "",
-    "express": "",
-    "request": ""
+    "express": ""
   }
 }
