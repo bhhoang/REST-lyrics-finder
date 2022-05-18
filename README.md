@@ -1,1 +1,1 @@
-# RiFA ( Rest lyrIc Finder Api)
+# RiFA ( Rest lyric Finder Api)
